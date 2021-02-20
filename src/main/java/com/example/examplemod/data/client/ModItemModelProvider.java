@@ -14,14 +14,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        withExistingParent("silver_block", modLoc("block/silver_block"));
-        withExistingParent("silver_ore", modLoc("block/silver_ore"));
+        withExistingParent("chameleon_block", modLoc("block/chameleon_block"));
+        withExistingParent("chameleon_ore", modLoc("block/chameleon_ore"));
 
-        withExistingParent("crafting_station", modLoc("block/crafting_station"));
+        withExistingParent("crafting_station_v1", modLoc("block/crafting_station_v1"));
 
         ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
 
-        builder(itemGenerated, "silver_ingot");
+        builder(itemGenerated, "chameleon_ingot");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {

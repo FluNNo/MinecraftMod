@@ -13,12 +13,16 @@ import net.minecraftforge.fml.RegistryObject;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final RegistryObject<Block> SILVER_ORE = register("silver_ore", () ->
+    public static final RegistryObject<Block> CHAMELEON_ORE = register("chameleon_ore", () ->
             new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).harvestLevel(2).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> SILVER_BLOCK = register("silver_block", () ->
+
+    public static final RegistryObject<Block> CHAMELEON_BLOCK = register("chameleon_block", () ->
             new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
-    public static final RegistryObject<AdvancedBlock> CRAFTING_STATION = register("crafting_station", () ->
+
+    public static final RegistryObject<AdvancedBlock> CRAFTING_STATION = register("crafting_station_v1", () ->
             new AdvancedBlock(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3,10).sound(SoundType.METAL).setLightLevel(value -> 15)));
+
+
 
     static void register() {}
 

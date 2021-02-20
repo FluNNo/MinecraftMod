@@ -17,7 +17,7 @@ public class OreGeneration {
     public static void generateOres(final BiomeLoadingEvent event) {
         if (!(event.getCategory().equals(Biome.Category.NETHER) || event.getCategory().equals(Biome.Category.THEEND))) {
             generateOres(event.getGeneration(), OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                    ModBlocks.SILVER_ORE.get().getDefaultState(), 5, 15, 30, 10);
+                    ModBlocks.CHAMELEON_ORE.get().getDefaultState(), 150, 0, 255, 100);
         }
     }
 
