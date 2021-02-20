@@ -8,5 +8,9 @@
   "item.examplemod.matter": "Matter",
   "item.examplemod.chameleon_ingot": "Chameleon Ingot",
   "item.examplemod.contained_matter": "Contained Matter",
-  "item.examplemod.contained_matter_unstable": "Contained Matter Unstable"
+  "item.examplemod.contained_matter_unstable": "Contained Matter Unstable",
+  "item.examplemod.tech_casing": "Tech Casing",
+  "block.examplemod.tech_casing": "Tech Casing",
+  "item.examplemod.tech_pillar": "Tech Pillar",
+  "block.examplemod.tech_pillar": "Tech Pillar"
 }

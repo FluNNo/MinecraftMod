@@ -19,6 +19,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHAMELEON_BLOCK = register("chameleon_block", () ->
             new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
 
+    public static final RegistryObject<Block> TECH_CASING = register("tech_casing", () ->
+            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> TECH_PILLAR = register("tech_pillar", () ->
+            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
+
     public static final RegistryObject<AdvancedBlock> CRAFTING_STATION = register("crafting_station_v1", () ->
             new AdvancedBlock(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3,10).sound(SoundType.METAL).setLightLevel(value -> 15)));
 

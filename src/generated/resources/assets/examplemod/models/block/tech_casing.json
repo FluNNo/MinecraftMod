@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "examplemod:blocks/tech_casing",
+    "down": "examplemod:blocks/tech_casing",
+    "up": "examplemod:blocks/tech_casing",
+    "north": "examplemod:blocks/tech_casing",
+    "east": "examplemod:blocks/tech_casing",
+    "south": "examplemod:blocks/tech_casing",
+    "west": "examplemod:blocks/tech_casing"
+  }
+}
