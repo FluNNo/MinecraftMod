@@ -1,8 +1,12 @@
 {
-  "block.examplemod.silver_block": "Block of Silver",
-  "block.examplemod.silver_ore": "Silver Ore",
-  "item.examplemod.silver_ingot": "Silver Ingot",
-
   "item.examplemod.crafting_station_v1": "Crafting Station V1",
-  "block.examplemod.crafting_station_v1_block": "Crafting Station V1"
+  "block.examplemod.crafting_station_v1": "Crafting Station V1",
+  "item.examplemod.chameleon_ore": "Chameleon Ore",
+  "block.examplemod.chameleon_ore": "Chameleon Ore",
+  "item.examplemod.chameleon_block_item": "Chameleon Block",
+  "block.examplemod.chameleon_block": "Chameleon Block",
+  "item.examplemod.matter": "Matter",
+  "item.examplemod.chameleon_ingot": "Chameleon Ingot",
+  "item.examplemod.contained_matter": "Contained Matter",
+  "item.examplemod.contained_matter_unstable": "Contained Matter Unstable"
 }

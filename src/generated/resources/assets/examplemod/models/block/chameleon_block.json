@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "examplemod:blocks/chameleon_block",
+    "down": "examplemod:blocks/chameleon_block",
+    "up": "examplemod:blocks/chameleon_block",
+    "north": "examplemod:blocks/chameleon_block",
+    "east": "examplemod:blocks/chameleon_block",
+    "south": "examplemod:blocks/chameleon_block",
+    "west": "examplemod:blocks/chameleon_block"
+  }
+}

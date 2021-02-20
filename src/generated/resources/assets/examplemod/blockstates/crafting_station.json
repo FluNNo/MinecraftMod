@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "examplemod:block/crafting_station" },
-    "facing=south": { "model": "examplemod:block/crafting_station", "y": 180 },
-    "facing=west":  { "model": "examplemod:block/crafting_station", "y": 270 },
-    "facing=east":  { "model": "examplemod:block/crafting_station", "y": 90 }
-  }
-}

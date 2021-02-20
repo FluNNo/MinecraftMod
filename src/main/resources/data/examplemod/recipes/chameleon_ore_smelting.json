@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "examplemod:chameleon_ore"
+  },
+  "result": "examplemod:chameleon_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}
