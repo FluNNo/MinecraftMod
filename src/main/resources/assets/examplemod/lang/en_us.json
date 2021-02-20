@@ -1,0 +1,8 @@
+{
+  "block.examplemod.silver_block": "Block of Silver",
+  "block.examplemod.silver_ore": "Silver Ore",
+  "item.examplemod.silver_ingot": "Silver Ingot",
+
+  "item.examplemod.crafting_station_v1": "Crafting Station V1",
+  "block.examplemod.crafting_station_v1_block": "Crafting Station V1"
+}

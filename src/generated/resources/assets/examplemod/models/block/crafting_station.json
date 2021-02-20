@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "examplemod:block/crafting_station_side_animated",
+    "down": "examplemod:block/crafting_station_bottom",
+    "up": "examplemod:block/crafting_station_top",
+    "north": "block/furnace",
+    "east": "examplemod:block/crafting_station_side_animated",
+    "south": "examplemod:block/crafting_station_side_animated",
+    "west": "examplemod:block/crafting_station_side_animated"
+  }
+}
