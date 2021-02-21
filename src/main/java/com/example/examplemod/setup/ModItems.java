@@ -25,7 +25,7 @@ public class ModItems {
             new Item((new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().effect(() -> new EffectInstance(Effects.SPEED, 200, 1),1.0f).fastToEat().hunger(2).saturation(0.6f).build()))));
 
     public static final  RegistryObject<Item> MUTZEN_XL = RegistryHandler.ITEMS.register("mutzen_xl", () ->
-            new Item((new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().effect(() -> new EffectInstance(Effects.SPEED, 200, 2),1.0f).fastToEat().hunger(18).saturation(3.0f).build()))));
+            new Item((new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().effect(() -> new EffectInstance(Effects.SPEED, 200, 2),1.0f).hunger(18).saturation(3.0f).build()))));
 
     static void register() {}
 }
