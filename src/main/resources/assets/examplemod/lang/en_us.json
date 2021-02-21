@@ -14,5 +14,7 @@
   "item.examplemod.tech_pillar": "Tech Pillar",
   "block.examplemod.tech_pillar": "Tech Pillar",
   "item.examplemod.tech_energy_block": "Tech Energy Block",
-  "block.examplemod.tech_energy_block": "Tech Energy Block"
+  "block.examplemod.tech_energy_block": "Tech Energy Block",
+  "item.examplemod.mutzen": "Mutzen",
+  "item.examplemod.mutzen_xl": "Mutzen XL"
 }
