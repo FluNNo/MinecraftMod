@@ -10,6 +10,9 @@ import net.minecraftforge.fml.RegistryObject;
 
 public class ModItems {
 
+    public static final RegistryObject<ModAdvancedItems> ADVANCED_ITEM = RegistryHandler.ITEMS.register("advanced_item", () -> new ModAdvancedItems
+            (new Item.Properties().group(RegistryHandler.EXAMPLE_GROUP)));
+
     public static final  RegistryObject<Item> CHAMELEON_INGOT = RegistryHandler.ITEMS.register("chameleon_ingot", () ->
             new Item((new Item.Properties().group(RegistryHandler.EXAMPLE_GROUP))));
 
