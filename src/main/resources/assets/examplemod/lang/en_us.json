@@ -16,5 +16,6 @@
   "item.examplemod.tech_energy_block": "Tech Energy Block",
   "block.examplemod.tech_energy_block": "Tech Energy Block",
   "item.examplemod.mutzen": "Mutzen",
-  "item.examplemod.mutzen_xl": "Mutzen XL"
+  "item.examplemod.mutzen_xl": "Mutzen XL",
+  "itemGroup.moditems": "Mod Items"
 }
