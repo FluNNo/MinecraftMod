@@ -37,6 +37,7 @@ public class RegistryHandler {
         ModEntityTypes.register();
         ModTileEntities.register();
         ModContainers.register();
+        ModRecipes.register();
     }
 
 }

@@ -3,6 +3,7 @@ package com.example.examplemod.recipes;
 import com.example.examplemod.setup.ModRecipes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipeSerializer;
+import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
@@ -12,8 +13,8 @@ import net.minecraftforge.items.wrapper.RecipeWrapper;
 public class CustomRecipe implements ICustomRecipe {
 
     private final ResourceLocation id;
+    private Ingredient input;
     private final ItemStack output;
-    private final Ingredient input;
 
     public CustomRecipe(ResourceLocation id, Ingredient input, ItemStack output) {
         this.id = id;
@@ -35,11 +36,6 @@ public class CustomRecipe implements ICustomRecipe {
     }
 
     @Override
-    public Ingredient getInput() {
-        return this.input;
-    }
-
-    @Override
     public ItemStack getRecipeOutput() {
         return this.output;
     }
@@ -51,7 +47,17 @@ public class CustomRecipe implements ICustomRecipe {
 
     @Override
     public IRecipeSerializer<?> getSerializer() {
-        return ModRecipes.RECIPE_SERIALIZER.get();
+        return ModRecipes.CUSTOM_SERIALIZER.get();
+    }
+
+    @Override
+    public IRecipeType<?> getType() {
+        return ModRecipes.CUSTOM_TYPE;
+    }
+
+    @Override
+    public Ingredient getInput() {
+        return this.input;
     }
 
     @Override

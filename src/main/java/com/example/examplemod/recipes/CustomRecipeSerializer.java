@@ -11,21 +11,21 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.registries.ForgeRegistryEntry;
 
-import javax.annotation.Nullable;
-
 public class CustomRecipeSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<CustomRecipe> {
 
+    @Override
     public CustomRecipe read(ResourceLocation recipeId, JsonObject json) {
         ItemStack output = CraftingHelper.getItemStack(JSONUtils.getJsonObject(json, "output"), true);
         Ingredient input = Ingredient.deserialize(JSONUtils.getJsonObject(json, "input"));
+
         return new CustomRecipe(recipeId, input, output);
     }
 
-    @Nullable
     @Override
     public CustomRecipe read(ResourceLocation recipeId, PacketBuffer buffer) {
         ItemStack output = buffer.readItemStack();
         Ingredient input = Ingredient.read(buffer);
+
         return new CustomRecipe(recipeId, input, output);
     }
 

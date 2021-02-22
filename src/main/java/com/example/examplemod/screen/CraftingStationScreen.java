@@ -38,7 +38,7 @@ public class CraftingStationScreen extends ContainerScreen<CraftingStationContai
     @Override
     protected void drawGuiContainerForegroundLayer(MatrixStack matrixStack, int x, int y) {
         super.drawGuiContainerForegroundLayer(matrixStack, x, y);
-        //this.font.drawString(this.title.getFormattedText(), 8.0f, 8.0f, 0x404040);
+        //this.font.drawString(this.title.get, 8.0f, 8.0f, 0x404040);
         //this.font.drawString(this.playerInventory.getDisplayName()., 8.0f, 69.0f, 0x404040);
     }
 

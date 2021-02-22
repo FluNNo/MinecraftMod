@@ -10,15 +10,15 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraftforge.fml.RegistryObject;
 
-import static com.example.examplemod.setup.RegistryHandler.RECIPE_SERIALIZERS;
-
 public class ModRecipes {
 
     public static final IRecipeSerializer<CustomRecipe> CUSTOM_RECIPE_SERIALIZER = new CustomRecipeSerializer();
     public static final IRecipeType<ICustomRecipe> CUSTOM_TYPE = registerType(ICustomRecipe.RECIPE_TYPE_ID);
 
-     public static final RegistryObject<IRecipeSerializer<?>> RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register("example",
+    public static final RegistryObject<IRecipeSerializer<?>> CUSTOM_SERIALIZER = RegistryHandler.RECIPE_SERIALIZERS.register("custom",
             () -> CUSTOM_RECIPE_SERIALIZER);
+
+    static void register() {};
 
     private static class RecipeType<T extends IRecipe<?>> implements IRecipeType<T> {
         @Override
