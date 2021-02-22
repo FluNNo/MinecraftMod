@@ -25,6 +25,7 @@ public class ExampleMod {
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
+        // brauch man das?
         RegistryHandler.register();
 
         // Register ourselves for server and other game events we are interested in
@@ -40,3 +41,5 @@ public class ExampleMod {
     }
 
 }
+// GlobalEntityTypeAttributes
+//EntityAttributeCreationEvent
