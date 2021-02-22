@@ -1,6 +1,6 @@
 package com.example.examplemod;
 
-import com.example.examplemod.entities.ExampleEntity;
+import com.example.examplemod.entities.MutzenSheep;
 import com.example.examplemod.setup.ModEntityTypes;
 import com.example.examplemod.setup.RegistryHandler;
 import com.example.examplemod.world.OreGeneration;
@@ -36,7 +36,7 @@ public class ExampleMod {
     //add Line for each Mod Entity!
     private void setup(final FMLClientSetupEvent event) {
         DeferredWorkQueue.runLater(() -> {
-            GlobalEntityTypeAttributes.put(ModEntityTypes.EXAMPLE_ENTITY.get(), ExampleEntity.setCustomAttributes().create());
+            GlobalEntityTypeAttributes.put(ModEntityTypes.MUTZEN_SHEEP.get(), MutzenSheep.setCustomAttributes().create());
         });
     }
 
