@@ -2,7 +2,10 @@ package com.example.examplemod.util;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.client.entity.render.ExampleEntityRenderer;
+import com.example.examplemod.screen.CraftingStationScreen;
+import com.example.examplemod.setup.ModContainers;
 import com.example.examplemod.setup.ModEntityTypes;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -14,7 +17,10 @@ public class ClientEventBusSubscriber {
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
-        // Jede Entity braucht eine eigene Zeile!
+        //GUI / SCREENS
+        ScreenManager.registerFactory(ModContainers.CRAFTING_STATION_CONTAINER.get(), CraftingStationScreen::new);
+
+        //MOBS / ANIMALS
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.EXAMPLE_ENTITY.get(), ExampleEntityRenderer::new);
     }
 }
