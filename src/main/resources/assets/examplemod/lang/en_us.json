@@ -19,5 +19,6 @@
   "item.examplemod.mutzen_xl": "Mutzen XL",
   "itemGroup.moditems": "Mod Items",
   "item.examplemod.advanced_item": "Advanced Item",
-  "tooltip.advanced_item.hold_shift": "\u00A76Hold \u00A7cShift \u00A76for More Information"
+  "tooltip.advanced_item.hold_shift": "\u00A76Hold \u00A7cShift \u00A76for More Information",
+  "entity.examplemod.exampleentity": "WTF"
 }
