@@ -29,7 +29,7 @@ public class TechBiome {
                 .withSkyColor(123123)
                 .build())
             .withMobSpawnSettings(new MobSpawnInfo.Builder()
-                    .withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(ModEntityTypes.MUTZEN_SHEEP.get(), 100,100,500)).copy())
+                    .withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(ModEntityTypes.MUTZEN_SHEEP.get(), 1,5,10)).copy())
             .withGenerationSettings(new BiomeGenerationSettings.Builder()
                     .withSurfaceBuilder(() -> new ConfiguredSurfaceBuilder(DefaultSurfaceBuilder.DEFAULT,
                             new SurfaceBuilderConfig(
