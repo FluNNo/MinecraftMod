@@ -1,6 +1,7 @@
 package com.example.examplemod.setup;
 
 import com.example.examplemod.block.CraftingStationBlock;
+import com.example.examplemod.block.MatterStabilizerBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -29,6 +30,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TECH_ENERGY_BLOCK = register("tech_energy_block", () ->
             new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> MATTER_STABILIZER = register("matter_stabilizer", MatterStabilizerBlock::new);
 
     public static final RegistryObject<CraftingStationBlock> CRAFTING_STATION = register("crafting_station_v1", () ->
             new CraftingStationBlock(AbstractBlock.Properties.from(ModBlocks.DEF_BLOCK.get())));

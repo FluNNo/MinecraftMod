@@ -18,7 +18,9 @@
   "item.examplemod.mutzen": "Mutzen",
   "item.examplemod.mutzen_xl": "Mutzen XL",
   "itemGroup.moditems": "Mod Items",
-  "item.examplemod.advanced_item": "Advanced Item",
+  "item.examplemod.matter_glove": "Matter Glove",
   "tooltip.advanced_item.hold_shift": "\u00A76Hold \u00A7cShift \u00A76for More Information",
-  "entity.examplemod.exampleentity": "WTF"
+  "entity.examplemod.mutzen_sheep": "Mutzen Sheep",
+  "item.examplemod.matter_stabilizer": "Matter Stabilizer",
+  "block.examplemod.matter_stabilizer": "Matter Stabilizer"
 }

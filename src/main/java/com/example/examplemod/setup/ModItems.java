@@ -1,5 +1,6 @@
 package com.example.examplemod.setup;
 
+import com.example.examplemod.item.MatterGloveItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.potion.EffectInstance;
@@ -8,7 +9,7 @@ import net.minecraftforge.fml.RegistryObject;
 
 public class ModItems {
 
-    public static final RegistryObject<ModAdvancedItems> ADVANCED_ITEM = RegistryHandler.ITEMS.register("advanced_item", () -> new ModAdvancedItems
+    public static final RegistryObject<MatterGloveItem> MATTER_GLOVE = RegistryHandler.ITEMS.register("matter_glove", () -> new MatterGloveItem
             (new Item.Properties().group(RegistryHandler.EXAMPLE_GROUP)));
 
     public static final  RegistryObject<Item> CHAMELEON_INGOT = RegistryHandler.ITEMS.register("chameleon_ingot", () ->

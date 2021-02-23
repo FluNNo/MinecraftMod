@@ -12,7 +12,7 @@ public class MutzenSheepRenderer extends MobRenderer<MutzenSheep, MutzenSheepMod
     protected static final ResourceLocation TEXTURE = new ResourceLocation(ExampleMod.MODID, "textures/entity/mutzen_sheep.png");
 
     public MutzenSheepRenderer(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new MutzenSheepModel<>(), 0.5f);
+        super(renderManagerIn, new MutzenSheepModel<>(), 0.4f);
     }
 
     @Override

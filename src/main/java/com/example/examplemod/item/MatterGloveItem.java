@@ -1,4 +1,4 @@
-package com.example.examplemod.setup;
+package com.example.examplemod.item;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
@@ -17,13 +17,16 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import org.lwjgl.glfw.GLFW;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ModAdvancedItems extends Item {
+public class MatterGloveItem extends Item implements IAnimatable {
 
-    public ModAdvancedItems(Properties properties) {
+    public MatterGloveItem(Properties properties) {
         super(properties);
     }
 
@@ -43,5 +46,15 @@ public class ModAdvancedItems extends Item {
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         playerIn.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 200, 5));
         return ActionResult.resultSuccess(playerIn.getHeldItem(handIn));
+    }
+
+    @Override
+    public void registerControllers(AnimationData animationData) {
+
+    }
+
+    @Override
+    public AnimationFactory getFactory() {
+        return null;
     }
 }
