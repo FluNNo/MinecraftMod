@@ -32,8 +32,6 @@ public class ExampleMod {
 
     public ExampleMod() {
 
-        GeckoLib.initialize();
-
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         GeckoLib.initialize();
 
