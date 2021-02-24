@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "examplemod:blocks/phoesis_grass_top",
+    "down": "examplemod:blocks/phoesis_stone",
+    "up": "examplemod:blocks/phoesis_grass_top",
+    "north": "examplemod:blocks/phoesis_grass_side",
+    "east": "examplemod:blocks/phoesis_grass_side",
+    "south": "examplemod:blocks/phoesis_grass_side",
+    "west": "examplemod:blocks/phoesis_grass_side"
+  }
+}

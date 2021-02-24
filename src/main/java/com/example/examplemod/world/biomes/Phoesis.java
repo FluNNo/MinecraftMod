@@ -4,15 +4,18 @@ import com.example.examplemod.setup.ModBlocks;
 import com.example.examplemod.setup.ModEntityTypes;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.world.biome.*;
+import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
+import net.minecraft.world.gen.feature.BlockStateProvidingFeatureConfig;
+import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.DefaultSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 
-public class TechBiome {
+public class Phoesis {
 
     public Biome biome;
 
-    public TechBiome() {
+    public Phoesis() {
 
         biome = new Biome.Builder()
             .precipitation(Biome.RainType.RAIN)
@@ -33,11 +36,13 @@ public class TechBiome {
             .withGenerationSettings(new BiomeGenerationSettings.Builder()
                     .withSurfaceBuilder(() -> new ConfiguredSurfaceBuilder(DefaultSurfaceBuilder.DEFAULT,
                             new SurfaceBuilderConfig(
-                                    ModBlocks.TECH_CASING.get().getDefaultState(),
-                                    ModBlocks.TECH_CASING.get().getDefaultState(),
-                                    ModBlocks.TECH_CASING.get().getDefaultState())))
+                                    ModBlocks.PHOESIS_GRASS_BLOCK.get().getDefaultState(),
+                                    ModBlocks.PHOESIS_STONE.get().getDefaultState(),
+                                    ModBlocks.PHOESIS_STONE.get().getDefaultState())))
                     .build())
         .build();
     }
+
+   // public static final BlockStateProvidingFeatureConfig WARPED_FOREST_VEGETATION_CONFIG = new BlockStateProvidingFeatureConfig((new WeightedBlockStateProvider()).addWeightedBlockstate(Features.States.WARPED_ROOTS, 85).addWeightedBlockstate(Features.States.CRIMSON_ROOTS, 1).addWeightedBlockstate(Features.States.WARPED_FUNGUS, 13).addWeightedBlockstate(Features.States.CRIMSON_FUNGUS, 1));
 
 }

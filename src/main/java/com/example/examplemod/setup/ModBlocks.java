@@ -33,6 +33,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRAFTING_STATION = register("crafting_station_v1", () ->
             new CraftingStationBlock(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
 
+    public static final RegistryObject<Block> PHOESIS_GRASS_BLOCK = register("phoesis_grass_block", () ->
+            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> PHOESIS_STONE = register("phoesis_stone", () ->
+            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
+
 
 
     static void register() {}

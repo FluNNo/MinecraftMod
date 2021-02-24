@@ -22,5 +22,9 @@
   "tooltip.advanced_item.hold_shift": "\u00A76Hold \u00A7cShift \u00A76for More Information",
   "entity.examplemod.mutzen_sheep": "Mutzen Sheep",
   "item.examplemod.matter_stabilizer": "Matter Stabilizer",
-  "block.examplemod.matter_stabilizer": "Matter Stabilizer"
+  "block.examplemod.matter_stabilizer": "Matter Stabilizer",
+  "item.examplemod.phoesis_stone": "Phoesis Stone",
+  "block.examplemod.phoesis_stone": "Phoesis Stone",
+  "item.examplemod.phoesis_grass_block": "Phoesis Grass Block",
+  "block.examplemod.phoesis_grass_block": "Phoesis Grass Block"
 }

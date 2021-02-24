@@ -48,8 +48,8 @@ public class ExampleMod {
         DeferredWorkQueue.runLater(() -> {
             GlobalEntityTypeAttributes.put(ModEntityTypes.MUTZEN_SHEEP.get(), MutzenSheep.setCustomAttributes().create());
 
-            BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(key(ModBiomes.TECH_BIOME.get()), 10));
-            BiomeDictionary.addTypes(key(ModBiomes.TECH_BIOME.get()), BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.OVERWORLD);
+            BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(key(ModBiomes.PHOESIS.get()), 0));
+            BiomeDictionary.addTypes(key(ModBiomes.PHOESIS.get()), BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.OVERWORLD);
         });
     }
 

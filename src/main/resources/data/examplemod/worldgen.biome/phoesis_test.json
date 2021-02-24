@@ -1,0 +1,73 @@
+{
+  "depth": 0.80,
+  "scale": 0.20,
+  "precipitation": "none",
+  "category": "plains",
+  "temperature": 0.4,
+  "downfall": 0.6,
+  "player_spawn_friendly": true,
+
+  "effects": {
+
+    "sky_color": 7098023,
+    "fog_color": 7098023,
+    "foliage_color": 7098023,
+    "grass_color": 7098023,
+    "water_color": 7098023,
+    "water_fog_color": 7098023,
+
+    "particle": {
+      "options": {
+        "type": "minecraft:warped_spore"
+      },
+      "probability": 0.1
+    },
+
+    "ambient_sound": "minecraft:ambient.warped_forest.loop"
+
+  },
+
+  "surface_builder": "minecraft:overworld",
+
+  "carvers": {
+    "air": [],
+    "liquid": []
+  },
+
+  "features": [
+
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    ["examplemod:chameleon_ore"],
+    [],
+    [],
+    []
+
+  ],
+
+  "starts": [],
+
+  "spawners": {
+    "monster": [],
+    "creature": [
+
+      {
+        "type": "examplemod:mutzen_sheep",
+        "weight": 1,
+        "minCount": 4,
+        "maxCount": 4
+      }
+
+    ],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+
+  "spawn_costs": {}
+
+}
