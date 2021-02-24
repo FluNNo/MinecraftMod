@@ -21,4 +21,5 @@ public class MatterGloveModel extends AnimatedGeoModel<MatterGloveItem> {
     public ResourceLocation getAnimationFileLocation(MatterGloveItem matterGloveItem) {
         return new ResourceLocation(GeckoLib.ModID, "animations/matter_glove.animation.json");
     }
+
 }

@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.matter_glove.equip": {
+		"animation_matter_glove_equip": {
 			"animation_length": 1.04,
 			"bones": {
 				"palm": {

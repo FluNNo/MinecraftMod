@@ -17,6 +17,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import org.lwjgl.glfw.GLFW;
+import software.bernie.example.GeckoLibMod;
+import software.bernie.geckolib3.core.AnimationState;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -24,6 +26,7 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
+import software.bernie.geckolib3.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -31,9 +34,44 @@ import java.util.List;
 public class MatterGloveItem extends Item implements IAnimatable {
 
     public AnimationFactory factory = new AnimationFactory(this);
+    private String controllerName = "matter_glove_animation_controller";
+
+    private <P extends Item & IAnimatable> PlayState predicate(AnimationEvent<P> event) {
+        return PlayState.CONTINUE;
+    }
 
     public MatterGloveItem(Properties properties) {
         super(properties);
+    }
+
+    @Override
+    public void registerControllers(AnimationData animationData) {
+        animationData.addAnimationController(new AnimationController(this, controllerName, 20, this::predicate));
+    }
+
+    @Override
+    public AnimationFactory getFactory() {
+        return this.factory;
+    }
+
+    @Override
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity player, Hand hand) {
+        if (!worldIn.isRemote) {
+            return super.onItemRightClick(worldIn, player, hand);
+        }
+
+        ItemStack stack = player.getHeldItem(hand);
+
+        AnimationController controller = GeckoLibUtil.getControllerForStack(this.factory, stack, controllerName);
+
+        if (controller.getAnimationState() == AnimationState.Stopped) {
+            player.sendStatusMessage(new StringTextComponent("Initializing..."), true);
+
+            controller.markNeedsReload();
+
+            controller.setAnimation(new AnimationBuilder().addAnimation("animation_matter_glove_equip", false));
+        }
+        return super.onItemRightClick(worldIn, player, hand);
     }
 
     @Override
@@ -48,27 +86,13 @@ public class MatterGloveItem extends Item implements IAnimatable {
         }
     }
 
-    @Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
-        playerIn.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 200, 5));
-        return ActionResult.resultSuccess(playerIn.getHeldItem(handIn));
-    }
+    //event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.matter_glove.equip", true));
 
-    //Animation Name rausfinden!
-    private <P extends Item & IAnimatable> PlayState predicate(AnimationEvent<P> event)
-    {
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("Soaryn_chest_popup", true));
-        return PlayState.CONTINUE;
-    }
+    //@Override
+    //public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
+    //    playerIn.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 200, 5));
+    //    return ActionResult.resultSuccess(playerIn.getHeldItem(handIn));
+    //}
 
-    @Override
-    public void registerControllers(AnimationData animationData) {
-        animationData.addAnimationController(new AnimationController(this, "controller", 20, this::predicate));
-    }
-
-    @Override
-    public AnimationFactory getFactory() {
-        return this.factory;
-    }
 }
 
