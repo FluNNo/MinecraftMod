@@ -1,8 +1,8 @@
 package com.example.examplemod.world;
 
+import com.example.examplemod.setup.ModBiomes;
 import com.example.examplemod.setup.ModBlocks;
 import net.minecraft.block.BlockState;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
@@ -15,9 +15,9 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 public class OreGeneration {
 
     public static void generateOres(final BiomeLoadingEvent event) {
-        if (!(event.getCategory().equals(Biome.Category.NETHER) || event.getCategory().equals(Biome.Category.THEEND))) {
+        if (event.getCategory().equals(ModBiomes.PHOESIS.get().getCategory())) {
             generateOres(event.getGeneration(), OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                    ModBlocks.CHAMELEON_ORE.get().getDefaultState(), 150, 0, 255, 100);
+                    ModBlocks.CHAMELEON_ORE.get().getDefaultState(), 8, 0, 255, 10);
         }
     }
 
