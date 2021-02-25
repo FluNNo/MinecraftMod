@@ -2,6 +2,7 @@ package com.example.examplemod.setup;
 
 import com.example.examplemod.block.CraftingStationBlock;
 import com.example.examplemod.block.MatterStabilizerBlock;
+import com.example.examplemod.block.PhoesisPortalBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -38,6 +39,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PHOESIS_STONE = register("phoesis_stone", () ->
             new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> PHOESIS_PORTAL = register("phoesis_portal", () ->
+            new PhoesisPortalBlock(AbstractBlock.Properties.create(Material.PORTAL).doesNotBlockMovement().hardnessAndResistance(-1.0F).sound(SoundType.GLASS).setLightLevel(value -> 10)));
 
 
 

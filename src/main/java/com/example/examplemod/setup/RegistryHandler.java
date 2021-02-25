@@ -9,6 +9,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,6 +24,7 @@ public class RegistryHandler {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITIES, ExampleMod.MODID);
     public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES, ExampleMod.MODID);
 
+    public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, ExampleMod.MODID);
     public static final ItemGroup EXAMPLE_GROUP = new ModGroups("moditems");
 
     public static void register() {
@@ -34,6 +36,7 @@ public class RegistryHandler {
         RECIPE_SERIALIZERS.register(modEventBus);
         CONTAINER_TYPES.register(modEventBus);
         BIOMES.register(modEventBus);
+        FEATURES.register(modEventBus);
 
         ModBlocks.register();
         ModItems.register();
@@ -42,6 +45,7 @@ public class RegistryHandler {
         ModContainers.register();
         ModRecipes.register();
         ModBiomes.register();
+        ModFeatures.register();
     }
 
 }
