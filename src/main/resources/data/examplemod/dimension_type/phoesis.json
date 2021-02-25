@@ -4,13 +4,13 @@
   "coordinate_scale": 1.0,
   "has_skylight": true,
   "has_ceiling": false,
-  "ambient_light": 0.2,
-  "fixed_time": false,
+  "ambient_light": 0,
+  "fixed_time": 18000,
   "piglin_safe": true,
   "bed_works": false,
   "respawn_anchor_works": false,
   "has_raids": false,
   "infiniburn": "examplemod:infiniburn_phoesis",
   "logical_height": 256,
-  "effects": "minecraft:the_end"
+  "effects": "minecraft:overworld"
 }

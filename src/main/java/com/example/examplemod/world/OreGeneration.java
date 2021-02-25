@@ -17,7 +17,7 @@ public class OreGeneration {
     public static void generateOres(final BiomeLoadingEvent event) {
         if (event.getCategory().equals(ModBiomes.PHOESIS.get().getCategory())) {
             generateOres(event.getGeneration(), OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                    ModBlocks.CHAMELEON_ORE.get().getDefaultState(), 8, 0, 255, 10);
+                    ModBlocks.CHAMELEON_ORE.get().getDefaultState(), 4, 0, 16, 10);
         }
     }
 

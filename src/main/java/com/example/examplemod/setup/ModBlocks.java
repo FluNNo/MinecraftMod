@@ -2,7 +2,6 @@ package com.example.examplemod.setup;
 
 import com.example.examplemod.block.CraftingStationBlock;
 import com.example.examplemod.block.MatterStabilizerBlock;
-import com.example.examplemod.block.PhoesisPortalBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -34,8 +33,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRAFTING_STATION = register("crafting_station_v1", () ->
             new CraftingStationBlock(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
 
-    public static final RegistryObject<Block> PHOESIS_GRASS_BLOCK = register("phoesis_grass_block", () ->
-            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
+    public static final RegistryObject<Block> PHOESIS_GRASS_BLOCK = register("phoesis_grass_block", PhoesisGrassBlock::new);
+
+    public static final RegistryObject<Block> PHOESIS_MUSHROOM_BLOCK = register("phoesis_mushroom_block", PhoesisMushroomBlock::new);
 
     public static final RegistryObject<Block> PHOESIS_STONE = register("phoesis_stone", () ->
             new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));

@@ -12,6 +12,7 @@ public class ModTags {
     public static final class Blocks {
         public static final ITag.INamedTag<Block> ORES_SILVER = forge("ores/silver");
         public static final ITag.INamedTag<Block> STORAGE_BLOCKS_SILVER = forge("storage_blocks/silver");
+        public static final ITag.INamedTag<Block> PHOESIS_GRASS_BLOCK = forge("storage_blocks/phoesis_grass_block");
 
         private static ITag.INamedTag<Block> forge(String path) {
             return BlockTags.makeWrapperTag(new ResourceLocation("forge", path).toString());
