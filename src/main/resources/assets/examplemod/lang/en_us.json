@@ -28,5 +28,7 @@
   "item.examplemod.phoesis_grass_block": "Phoesis Grass Block",
   "block.examplemod.phoesis_grass_block": "Phoesis Grass Block",
   "item.examplemod.phoesis_mushroom_block": "Phoesis Mushroom",
-  "block.examplemod.phoesis_mushroom_block": "Phoesis Mushroom"
+  "block.examplemod.phoesis_mushroom_block": "Phoesis Mushroom",
+  "item.examplemod.phoesis_bloomlight": "Phoesis Bloomlight",
+  "block.examplemod.phoesis_bloomlight": "Phoesis Bloomlight"
 }

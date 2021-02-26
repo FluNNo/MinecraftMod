@@ -29,6 +29,7 @@ public class ModBlocks {
 
     //Plants
     public static final RegistryObject<Block> PHOESIS_MUSHROOM = register("phoesis_mushroom_block", () -> new PhoesisMushroomBlock());
+    public static final RegistryObject<Block> PHOESIS_BLOOMLIGHT = register("phoesis_bloomlight", () -> new PhoesisBloomlight());
 
     //Misc
     public static final RegistryObject<Block> PHOESIS_PORTAL = register("phoesis_portal", () -> new PhoesisPortalBlock(Props.DEFAULT_PORTAL));

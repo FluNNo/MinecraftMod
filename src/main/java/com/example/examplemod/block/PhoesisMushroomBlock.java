@@ -99,27 +99,6 @@ public class PhoesisMushroomBlock extends BushBlock {
         return 0.5f;
     }
 
-    /*protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return state.isIn(ModBlocks.PHOESIS_GRASS.get()) || super.isValidGround(state, worldIn, pos);
-    }*/
-
-    /*
-    //what?
-    @Override
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        return true;
-    }
-
-    @Override
-    public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
-        return (double)rand.nextFloat() < 0.4D;
-    }
-
-    @Override
-    public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
-        spawnAsEntity(worldIn, pos, new ItemStack(this));
-    }*/
-
     public AbstractBlock.OffsetType getOffsetType() {
         return AbstractBlock.OffsetType.XYZ;
     }
