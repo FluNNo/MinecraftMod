@@ -105,7 +105,7 @@ public class PhoesisMushroomBlock extends BushBlock {
 
     @Override
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return state.isIn(ModBlocks.PHOESIS_GRASS.get());
+        return state.isIn(ModBlocks.PHOESIS_GRASS_BLOCK.get());
     }
 }
 

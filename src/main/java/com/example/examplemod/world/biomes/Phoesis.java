@@ -44,10 +44,11 @@ public class Phoesis {
                 .withGenerationSettings(new BiomeGenerationSettings.Builder()
                         .withSurfaceBuilder(() -> new ConfiguredSurfaceBuilder(DefaultSurfaceBuilder.DEFAULT,
                                 new SurfaceBuilderConfig(
-                                        ModBlocks.PHOESIS_GRASS.get().getDefaultState(),
+                                        ModBlocks.PHOESIS_GRASS_BLOCK.get().getDefaultState(),
                                         ModBlocks.PHOESIS_STONE.get().getDefaultState(),
                                         ModBlocks.PHOESIS_STONE.get().getDefaultState())))
-                        .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(ModFeatureConfig.PHOESIS_MUSHROOM_CONFIG).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(16))))
+                        .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(ModFeatureConfig.PHOESIS_GRASS_CONFIG).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(50))))
+                        .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(ModFeatureConfig.PHOESIS_MUSHROOM_CONFIG).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(8))))
                         .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(ModFeatureConfig.PHOESIS_BLOOMLIGHT_CONFIG).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(1))))
                         .build())
                 .build();

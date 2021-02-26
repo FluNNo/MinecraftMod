@@ -29,11 +29,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRAFTING_STATION = register("crafting_station_v1", () -> new CraftingStationBlock(Props.DEFAULT_IRON_BLOCK));
 
     //Growable Blocks
-    public static final RegistryObject<Block> PHOESIS_GRASS = register("phoesis_grass_block", () -> new PhoesisGrassBlock());
+    public static final RegistryObject<Block> PHOESIS_GRASS_BLOCK = register("phoesis_grass_block", () -> new PhoesisGrassBlock());
 
     //Plants
     public static final RegistryObject<Block> PHOESIS_MUSHROOM = register("phoesis_mushroom_block", () -> new PhoesisMushroomBlock());
     public static final RegistryObject<Block> PHOESIS_BLOOMLIGHT = register("phoesis_bloomlight", () -> new PhoesisBloomlight());
+    public static final RegistryObject<Block> PHOESIS_GRASS = register("phoesis_grass", () -> new PhoesisGrass());
 
     //Misc
     public static final RegistryObject<Block> PHOESIS_PORTAL = register("phoesis_portal", () -> new PhoesisPortalBlock(Props.DEFAULT_PORTAL));
@@ -55,6 +56,7 @@ public class ModBlocks {
     @OnlyIn(Dist.CLIENT)
     public static void setRenderTypes() {
         RenderTypeLookup.setRenderLayer(PHOESIS_BLOOMLIGHT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PHOESIS_GRASS.get(), RenderType.getCutout());
     }
 
 }

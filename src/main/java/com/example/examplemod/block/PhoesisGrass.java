@@ -1,7 +1,6 @@
 package com.example.examplemod.block;
 
 import com.example.examplemod.setup.ModBlocks;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BushBlock;
 import net.minecraft.block.SoundType;
@@ -9,13 +8,12 @@ import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
-public class PhoesisBloomlight extends BushBlock {
+public class PhoesisGrass extends BushBlock {
 
-    public PhoesisBloomlight() {
-        super(AbstractBlock.Properties.create(Material.PLANTS)
+    public PhoesisGrass() {
+        super(Properties.create(Material.PLANTS)
                 .zeroHardnessAndResistance()
                 .doesNotBlockMovement()
-                .setLightLevel(value -> 10)
                 .sound(SoundType.PLANT));
     }
 
@@ -24,8 +22,8 @@ public class PhoesisBloomlight extends BushBlock {
         return 0.5f;
     }
 
-    public AbstractBlock.OffsetType getOffsetType() {
-        return AbstractBlock.OffsetType.XYZ;
+    public OffsetType getOffsetType() {
+        return OffsetType.XYZ;
     }
 
     @Override
