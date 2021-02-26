@@ -9,6 +9,6 @@ import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
 public class ModFeatureConfig {
     private static final BlockState MUSHROOM = ModBlocks.PHOESIS_MUSHROOM.get().getDefaultState();
 
-    public static final BlockClusterFeatureConfig MUSHROOM_CONFIG = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(MUSHROOM), new SimpleBlockPlacer())).tries(8).build();
+    public static final BlockClusterFeatureConfig MUSHROOM_CONFIG = new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(MUSHROOM), new SimpleBlockPlacer()).tries(8).build();
 
 }
