@@ -5,14 +5,12 @@ import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.Features;
-import net.minecraft.world.gen.feature.NetherVegetationFeature;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class PhoesisGrassBlock extends Block implements IGrowable {
+public class PhoesisGrassBlock extends SpreadableSnowyDirtBlock implements IGrowable {
 
     public PhoesisGrassBlock() {
         super(AbstractBlock.Properties.create(Material.IRON)
@@ -35,7 +33,7 @@ public class PhoesisGrassBlock extends Block implements IGrowable {
 
     @Override
     public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
-        BlockPos blockpos = pos.up();
-        NetherVegetationFeature.func_236325_a_(worldIn, rand, blockpos, Features.Configs.WARPED_FOREST_VEGETATION_CONFIG, 3, 1);
+        //BlockPos blockpos = pos.up();
+        //NetherVegetationFeature.func_236325_a_(worldIn, rand, blockpos, Features.Configs.WARPED_FOREST_VEGETATION_CONFIG, 3, 1);
     }
 }

@@ -1,13 +1,11 @@
 package com.example.examplemod.block;
 
 import com.example.examplemod.setup.ModBlocks;
-import com.example.examplemod.setup.ModTags;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
@@ -16,15 +14,11 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
-import net.minecraftforge.common.ToolType;
 
 import javax.annotation.Nullable;
-import java.util.Random;
 import java.util.stream.Stream;
 
-public class PhoesisMushroomBlock extends BushBlock implements IGrowable {
+public class PhoesisMushroomBlock extends BushBlock {
 
     private static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
@@ -105,14 +99,15 @@ public class PhoesisMushroomBlock extends BushBlock implements IGrowable {
         return 0.5f;
     }
 
-    protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return state.isIn(ModBlocks.PHOESIS_GRASS_BLOCK.get()) || super.isValidGround(state, worldIn, pos);
-    }
+    /*protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
+        return state.isIn(ModBlocks.PHOESIS_GRASS.get()) || super.isValidGround(state, worldIn, pos);
+    }*/
 
+    /*
     //what?
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        return false;
+        return true;
     }
 
     @Override
@@ -122,7 +117,16 @@ public class PhoesisMushroomBlock extends BushBlock implements IGrowable {
 
     @Override
     public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
+        spawnAsEntity(worldIn, pos, new ItemStack(this));
+    }*/
 
+    public AbstractBlock.OffsetType getOffsetType() {
+        return AbstractBlock.OffsetType.XYZ;
+    }
+
+    @Override
+    protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
+        return state.isIn(ModBlocks.PHOESIS_GRASS.get());
     }
 }
 

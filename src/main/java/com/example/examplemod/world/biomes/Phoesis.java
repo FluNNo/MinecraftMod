@@ -2,22 +2,16 @@ package com.example.examplemod.world.biomes;
 
 import com.example.examplemod.setup.ModBlocks;
 import com.example.examplemod.setup.ModEntityTypes;
-import net.minecraft.client.audio.BackgroundMusicTracks;
+import com.example.examplemod.world.gen.features.config.ModFeatureConfig;
 import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.EntityType;
-import net.minecraft.particles.ParticleType;
 import net.minecraft.particles.ParticleTypes;
-import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
-import net.minecraft.world.gen.carver.ConfiguredCarvers;
-import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.feature.structure.StructureFeatures;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.FeatureSpreadConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
-import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraft.world.gen.surfacebuilders.DefaultSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 
@@ -50,10 +44,10 @@ public class Phoesis {
                 .withGenerationSettings(new BiomeGenerationSettings.Builder()
                         .withSurfaceBuilder(() -> new ConfiguredSurfaceBuilder(DefaultSurfaceBuilder.DEFAULT,
                                 new SurfaceBuilderConfig(
-                                        ModBlocks.PHOESIS_GRASS_BLOCK.get().getDefaultState(),
+                                        ModBlocks.PHOESIS_GRASS.get().getDefaultState(),
                                         ModBlocks.PHOESIS_STONE.get().getDefaultState(),
                                         ModBlocks.PHOESIS_STONE.get().getDefaultState())))
-                        .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.WARPED_FUNGI)
+                        .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(ModFeatureConfig.MUSHROOM_CONFIG).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(16))))
                         .build())
                 .build();
     }

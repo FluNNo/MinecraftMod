@@ -1,47 +1,37 @@
 package com.example.examplemod.setup;
 
-import com.example.examplemod.block.CraftingStationBlock;
-import com.example.examplemod.block.MatterStabilizerBlock;
-import net.minecraft.block.AbstractBlock;
+import com.example.examplemod.block.*;
 import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;
 
+
 public class ModBlocks {
-    public static final RegistryObject<Block> CHAMELEON_ORE = register("chameleon_ore", () ->
-            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).harvestLevel(2).sound(SoundType.STONE)));
 
-    public static final RegistryObject<Block> CHAMELEON_BLOCK = register("chameleon_block", () ->
-            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
+    //Normal Blocks
+    public static final RegistryObject<Block> CHAMELEON_ORE = register("chameleon_ore", () -> new Block(Props.DEFAULT_STONE_BLOCK));
+    public static final RegistryObject<Block> CHAMELEON_BLOCK = register("chameleon_block", () -> new Block(Props.DEFAULT_STONE_BLOCK));
+    public static final RegistryObject<Block> TECH_CASING = register("tech_casing", () -> new Block(Props.DEFAULT_IRON_BLOCK));
+    public static final RegistryObject<Block> TECH_PILLAR = register("tech_pillar", () -> new Block(Props.DEFAULT_IRON_BLOCK));
+    public static final RegistryObject<Block> TECH_ENERGY = register("tech_energy_block", () -> new Block(Props.DEFAULT_IRON_BLOCK));
+    public static final RegistryObject<Block> PHOESIS_STONE = register("phoesis_stone", () -> new Block(Props.DEFAULT_STONE_BLOCK));
 
-    public static final RegistryObject<Block> TECH_CASING = register("tech_casing", () ->
-            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
+    //Abnormal Blocks
+    public static final RegistryObject<Block> MATTER_STABILIZER = register("matter_stabilizer", () -> new MatterStabilizerBlock());
 
-    public static final RegistryObject<Block> TECH_PILLAR = register("tech_pillar", () ->
-            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
+    //Advanced Blocks
+    public static final RegistryObject<Block> CRAFTING_STATION = register("crafting_station_v1", () -> new CraftingStationBlock(Props.DEFAULT_IRON_BLOCK));
 
-    public static final RegistryObject<Block> TECH_ENERGY_BLOCK = register("tech_energy_block", () ->
-            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
+    //Growable Blocks
+    public static final RegistryObject<Block> PHOESIS_GRASS = register("phoesis_grass_block", () -> new PhoesisGrassBlock());
 
-    public static final RegistryObject<Block> MATTER_STABILIZER = register("matter_stabilizer", MatterStabilizerBlock::new);
+    //Plants
+    public static final RegistryObject<Block> PHOESIS_MUSHROOM = register("phoesis_mushroom_block", () -> new PhoesisMushroomBlock());
 
-    public static final RegistryObject<Block> CRAFTING_STATION = register("crafting_station_v1", () ->
-            new CraftingStationBlock(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
-
-    public static final RegistryObject<Block> PHOESIS_GRASS_BLOCK = register("phoesis_grass_block", PhoesisGrassBlock::new);
-
-    public static final RegistryObject<Block> PHOESIS_MUSHROOM_BLOCK = register("phoesis_mushroom_block", PhoesisMushroomBlock::new);
-
-    public static final RegistryObject<Block> PHOESIS_STONE = register("phoesis_stone", () ->
-            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).sound(SoundType.METAL)));
-
-    public static final RegistryObject<Block> PHOESIS_PORTAL = register("phoesis_portal", () ->
-            new PhoesisPortalBlock(AbstractBlock.Properties.create(Material.PORTAL).doesNotBlockMovement().hardnessAndResistance(-1.0F).sound(SoundType.GLASS).setLightLevel(value -> 10)));
+    //Misc
+    public static final RegistryObject<Block> PHOESIS_PORTAL = register("phoesis_portal", () -> new PhoesisPortalBlock(Props.DEFAULT_PORTAL));
 
 
 
@@ -53,7 +43,8 @@ public class ModBlocks {
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> ret = registerNoItem(name, block);
-        RegistryHandler.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties().group(RegistryHandler.EXAMPLE_GROUP)));
+        RegistryHandler.ITEMS.register(name, () -> new BlockItem(ret.get(), Props.DEFAULT_ITEM));
         return ret;
     }
+
 }
