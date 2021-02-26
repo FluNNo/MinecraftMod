@@ -2,6 +2,7 @@ package com.example.examplemod;
 
 import com.example.examplemod.entities.MutzenSheep;
 import com.example.examplemod.setup.ModBiomes;
+import com.example.examplemod.setup.ModBlocks;
 import com.example.examplemod.setup.ModEntityTypes;
 import com.example.examplemod.setup.RegistryHandler;
 import com.example.examplemod.world.OreGeneration;
@@ -37,6 +38,8 @@ public class ExampleMod {
     }
 
     private void setup(final FMLClientSetupEvent event) {
+        ModBlocks.setRenderTypes();
+
         DeferredWorkQueue.runLater(() -> {
             //Register Entities
             GlobalEntityTypeAttributes.put(ModEntityTypes.MUTZEN_SHEEP.get(), MutzenSheep.setCustomAttributes().create());

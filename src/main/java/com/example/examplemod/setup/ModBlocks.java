@@ -2,7 +2,11 @@ package com.example.examplemod.setup;
 
 import com.example.examplemod.block.*;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.BlockItem;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;
@@ -46,6 +50,11 @@ public class ModBlocks {
         RegistryObject<T> ret = registerNoItem(name, block);
         RegistryHandler.ITEMS.register(name, () -> new BlockItem(ret.get(), Props.DEFAULT_ITEM));
         return ret;
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static void setRenderTypes() {
+        RenderTypeLookup.setRenderLayer(PHOESIS_BLOOMLIGHT.get(), RenderType.getCutout());
     }
 
 }
