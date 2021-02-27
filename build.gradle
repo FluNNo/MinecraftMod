@@ -119,8 +119,6 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.0.42'
     implementation fg.deobf('software.bernie.geckolib:forge-1.16.5-geckolib:3.0.6')
 
-    implementation fg.deobf('software.bernie.geckolib:forge-1.16.5-geckolib:3.0.6')
-
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"

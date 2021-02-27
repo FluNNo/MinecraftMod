@@ -2,7 +2,7 @@ package com.example.examplemod.world.biomes;
 
 import com.example.examplemod.setup.ModBlocks;
 import com.example.examplemod.setup.ModEntityTypes;
-import com.example.examplemod.world.gen.features.config.ModFeatureConfig;
+import com.example.examplemod.world.gen.features.ModFeatureConfig;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.SoundEvents;
@@ -50,14 +50,9 @@ public class Phoesis {
                         .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(ModFeatureConfig.PHOESIS_GRASS_CONFIG).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(50))))
                         .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(ModFeatureConfig.PHOESIS_MUSHROOM_CONFIG).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(8))))
                         .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(ModFeatureConfig.PHOESIS_BLOOMLIGHT_CONFIG).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(1))))
-                        .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.HUGE_FUNGUS.withConfiguration(ModFeatureConfig.FUNGUS).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(5))))
                         .build())
                 .build();
     }
-
-
-    // public static final BlockStateProvidingFeatureConfig WARPED_FOREST_VEGETATION_CONFIG = new BlockStateProvidingFeatureConfig((new WeightedBlockStateProvider()).addWeightedBlockstate(Features.States.WARPED_ROOTS, 85).addWeightedBlockstate(Features.States.CRIMSON_ROOTS, 1).addWeightedBlockstate(Features.States.WARPED_FUNGUS, 13).addWeightedBlockstate(Features.States.CRIMSON_FUNGUS, 1));
-
 }
 
 // public static Biome makeWarpedForestBiome() {

@@ -1,4 +1,4 @@
-package com.example.examplemod.world;
+package com.example.examplemod.world.gen;
 
 import com.example.examplemod.setup.ModBiomes;
 import com.example.examplemod.setup.ModBlocks;

@@ -25,5 +25,4 @@ public class ModBiomes {
         BiomeDictionary.addTypes(key(ModBiomes.PHOESIS.get()), BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.OVERWORLD);
 
     }
-
 }
