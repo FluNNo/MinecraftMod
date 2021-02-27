@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "examplemod:blocks/phoesis_mushroom_stem",
+    "down": "examplemod:blocks/phoesis_mushroom_stem",
+    "up": "examplemod:blocks/phoesis_mushroom_stem",
+    "north": "examplemod:blocks/phoesis_mushroom_stem",
+    "east": "examplemod:blocks/phoesis_mushroom_stem",
+    "south": "examplemod:blocks/phoesis_mushroom_stem",
+    "west": "examplemod:blocks/phoesis_mushroom_stem"
+  }
+}

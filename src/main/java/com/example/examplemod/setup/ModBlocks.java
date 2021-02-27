@@ -21,6 +21,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> TECH_PILLAR = register("tech_pillar", () -> new Block(Props.DEFAULT_IRON_BLOCK));
     public static final RegistryObject<Block> TECH_ENERGY = register("tech_energy_block", () -> new Block(Props.DEFAULT_IRON_BLOCK));
     public static final RegistryObject<Block> PHOESIS_STONE = register("phoesis_stone", () -> new Block(Props.DEFAULT_STONE_BLOCK));
+    public static final RegistryObject<Block> PHOESIS_BIG_MUSHROOM = register("phoesis_big_mushroom", () -> new Block(Props.DEFAULT_STONE_BLOCK));
+    public static final RegistryObject<Block> PHOESIS_MUSHROOM_STEM = register("phoesis_mushroom_stem", () -> new Block(Props.DEFAULT_STONE_BLOCK));
 
     //Abnormal Blocks
     public static final RegistryObject<Block> MATTER_STABILIZER = register("matter_stabilizer", () -> new MatterStabilizerBlock());

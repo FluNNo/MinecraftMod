@@ -32,5 +32,9 @@
   "item.examplemod.phoesis_bloomlight": "Phoesis Bloomlight",
   "block.examplemod.phoesis_bloomlight": "Phoesis Bloomlight",
   "item.examplemod.phoesis_grass": "Phoesis Grass",
-  "block.examplemod.phoesis_grass": "Phoesis Grass"
+  "block.examplemod.phoesis_grass": "Phoesis Grass",
+  "item.examplemod.phoesis_big_mushroom": "Phoesis Big Mushroom",
+  "block.examplemod.phoesis_big_mushroom": "Phoesis Big Mushroom",
+  "item.examplemod.phoesis_mushroom_stem": "Phoesis Mushroom Stem",
+  "block.examplemod.phoesis_mushroom_stem": "Phoesis Mushroom Stem"
 }
