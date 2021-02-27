@@ -50,6 +50,7 @@ public class Phoesis {
                         .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(ModFeatureConfig.PHOESIS_GRASS_CONFIG).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(50))))
                         .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(ModFeatureConfig.PHOESIS_MUSHROOM_CONFIG).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(8))))
                         .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(ModFeatureConfig.PHOESIS_BLOOMLIGHT_CONFIG).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(1))))
+                        .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.HUGE_FUNGUS.withConfiguration(ModFeatureConfig.FUNGUS).withPlacement(Placement.COUNT_MULTILAYER.configure(new FeatureSpreadConfig(20))))
                         .build())
                 .build();
     }

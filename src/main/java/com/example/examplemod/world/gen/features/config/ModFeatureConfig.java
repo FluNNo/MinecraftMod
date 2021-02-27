@@ -2,9 +2,11 @@ package com.example.examplemod.world.gen.features.config;
 
 import com.example.examplemod.setup.ModBlocks;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
+import net.minecraft.world.gen.feature.HugeFungusConfig;
 
 public class ModFeatureConfig {
     private static final BlockState PHOESIS_MUSHROOM = ModBlocks.PHOESIS_MUSHROOM.get().getDefaultState();
@@ -15,4 +17,5 @@ public class ModFeatureConfig {
     public static final BlockClusterFeatureConfig PHOESIS_BLOOMLIGHT_CONFIG = new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(PHOESIS_BLOOMLIGHT), new SimpleBlockPlacer()).tries(8).build();
     public static final BlockClusterFeatureConfig PHOESIS_GRASS_CONFIG = new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(PHOESIS_GRASS), new SimpleBlockPlacer()).tries(8).build();
 
+    public static final HugeFungusConfig FUNGUS = new HugeFungusConfig(ModBlocks.PHOESIS_GRASS_BLOCK.get().getDefaultState(), Blocks.WARPED_STEM.getDefaultState(), Blocks.WARPED_WART_BLOCK.getDefaultState(), Blocks.SHROOMLIGHT.getDefaultState(), true);
 }
