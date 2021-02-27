@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "examplemod:phoesis_mushroom_block"
+          "name": "examplemod:phoesis_mushroom"
         }
       ]
     }
